@@ -11,7 +11,7 @@ const Navbar = () => {
       </Link>
       <MainNavMenu />
       <Button>
-        <Link href="https://admin.manuelradaljac.live">Upravljačka ploča</Link>
+        <a href="https://admin.manuelradaljac.live">Upravljačka ploča</a>
       </Button>
     </div>
   );

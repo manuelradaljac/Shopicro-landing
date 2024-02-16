@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,46 +12,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { Home } from "lucide-react"
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-]
+} from "@/components/ui/navigation-menu";
+import { Home, Store } from "lucide-react";
+import { Button } from "./button";
 
 export function MainNavMenu() {
   return (
@@ -65,9 +28,9 @@ export function MainNavMenu() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 bg-indigo-600 p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="/o-projektu"
                   >
-                    <Home className="h-6 w-6" />
+                    <Store className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
                       Shopicro
                     </div>
@@ -77,11 +40,11 @@ export function MainNavMenu() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/ideja" title="Ideja">
-                Kako je nastala ideja za ovaj projekt
-              </ListItem>
               <ListItem href="/autor" title="Autor">
                 Malo više o meni
+              </ListItem>
+              <ListItem href="/ideja" title="Ideja">
+                Kako je nastala ideja za ovaj projekt
               </ListItem>
               <ListItem href="/tehnologije" title="Tehnologije">
                 Tehnologije korištene u izradi ovog projekta
@@ -90,19 +53,22 @@ export function MainNavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Video prezentacija</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
+            <div className="flex flex-col justify-center items-center p-10 gap-y-5">
+              <div className="ratio ratio-16x9">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/m8OBCH2zea0?si=8fJ4-URu_v4T92iv&autoplay=1&mute=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              />
+              </div>
+              <Button>
+                Youtube
+              </Button>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -114,7 +80,7 @@ export function MainNavMenu() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -139,6 +105,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";
