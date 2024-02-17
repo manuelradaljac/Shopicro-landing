@@ -6,10 +6,10 @@ const Header = () => {
     <div className="flex flex-col items-center text-center h-dvh justify-center gap-y-5">
       <div className="flex flex-row items-center justify-center leading-loose">
         <h1 className="leading-snug lg:leading-snug font-extrabold text-transparent text-3xl sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-800">
-          Jednostavnije.
+          jednostavniji.
         </h1>
         <h1 className="leading-snug lg:leading-snug font-extrabold text-transparent text-3xl sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-800">
-          Shopicro
+        webshopovi.
         </h1>
       </div>
       <div className="">

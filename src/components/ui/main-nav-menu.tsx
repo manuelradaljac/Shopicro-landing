@@ -17,6 +17,9 @@ import { Home, Store } from "lucide-react";
 import { Button } from "./button";
 
 export function MainNavMenu() {
+  
+  const videoLink = "https://www.youtube.com/embed/m8OBCH2zea0?si=8fJ4-URu_v4T92iv&autoplay=1&mute=1"
+  
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -60,13 +63,14 @@ export function MainNavMenu() {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/m8OBCH2zea0?si=8fJ4-URu_v4T92iv&autoplay=1&mute=1"
+                src={videoLink}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               />
               </div>
-              <Button>
-                Youtube
+              <Button asChild>
+                
+                <a href={videoLink} target="_blank" rel="noreferrer">Youtube</a>
               </Button>
             </div>
           </NavigationMenuContent>
