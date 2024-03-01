@@ -18,7 +18,7 @@ import { Button } from "./button";
 
 export function MainNavMenu() {
   
-  const videoLink = "https://www.youtube.com/embed/m8OBCH2zea0?si=8fJ4-URu_v4T92iv&autoplay=1&mute=1"
+  const videoLink = "."
   
   return (
     <NavigationMenu>
